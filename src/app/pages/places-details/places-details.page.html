@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-buttons>
       <ion-button slot="start" color="primary">
-        <ion-back-button defaultHref="/events"> </ion-back-button>
+        <ion-back-button defaultHref="/places/{{id}}"> </ion-back-button>
       </ion-button>
       <ion-title color="primary">Lugar Turistico </ion-title>
     </ion-buttons>
@@ -40,5 +40,5 @@
 
 </ion-content>
 <div padding>
-  <ion-button expand="block">Visitar</ion-button>
+  <ion-button expand="block" (click)="maps()" [href]="url">Visitar</ion-button>
 </div>

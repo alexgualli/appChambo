@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlaceService } from 'src/app/service/place/place.service';
+import { ActivationEnd, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-places',
@@ -9,26 +10,27 @@ import { PlaceService } from 'src/app/service/place/place.service';
 export class PlacesPage implements OnInit {
 
   places:any[];
-  test:any[];
   placesFilter:any[];
-
-  constructor(private placeService:PlaceService) { }
+  id:number;
+  constructor(private placeService:PlaceService, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit() {
     this.places = [];
-    this.test=[];
+    this.id=parseInt(this.activatedRoute.snapshot.paramMap.get('id'));
     this.getAllPlaces();
+
   }
-  
 
   getAllPlaces(refresher?) {
-    this.placeService.getAllPlaces()
+    
+    if(parseInt(this.activatedRoute.snapshot.paramMap.get('id')) > 0){
+      this.placeService.getAllPlaces()
       .subscribe((res: any) => {
-        this.places = res
-        this.test=res.cartegoria.id
-        this.placesFilter = res
-        console.log(" OBTENIDO ",this.test);
-      })
+        this.places = res.filter( e => e.categoria.id===this.id);
+      });
+    }
+    
+    /**/
       if(refresher){
         setTimeout(() => {
           console.log('Async operation has ended');
