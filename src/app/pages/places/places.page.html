@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>places</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item-sliding *ngFor="let place of places">
+    <ion-card color="light">        
+        <ion-toolbar color="light">
+            <ion-buttons slot="primary">
+                <ion-button color="secondary" routerLink="/eventDetails/{{ event.id }}">
+                    <ion-icon slot="icon-only" name="eye"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+            <ion-title>{{ place.nombre }}</ion-title>
+        </ion-toolbar>
+        <ion-card-content>
+            
+        </ion-card-content>
+    </ion-card>
+</ion-item-sliding>
+
+</ion-content>
