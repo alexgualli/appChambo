@@ -1,9 +1,44 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>placesDetails</ion-title>
+    <ion-buttons>
+      <ion-button slot="start" color="primary">
+        <ion-back-button defaultHref="/events"> </ion-back-button>
+      </ion-button>
+      <ion-title color="primary">Lugar Turistico </ion-title>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <ion-card-content>
+    <ion-card-title>
+      {{ place.nombre }}
+    </ion-card-title>
+    <br>
+    <ion-card-subtitle>
+      Descripcion:
+    </ion-card-subtitle>
+    {{ place.descripcion }}
+    <br><br>
+    <ion-card-subtitle>
+      Categoria:
+    </ion-card-subtitle>   
+    {{ category }}
+    <br><br>
+    <ion-card-subtitle>
+      Latitud:
+    </ion-card-subtitle>
+    {{ place.latitud }}
+    <br><br>
+    <ion-card-subtitle>
+      Longitud:
+    </ion-card-subtitle>
+    {{ place.longitud }}
+    <br><br>
+  </ion-card-content>
+
 </ion-content>
+<div padding>
+  <ion-button expand="block">Visitar</ion-button>
+</div>

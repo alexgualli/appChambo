@@ -9,6 +9,5 @@ export class ServiceService {
   
     constructor(url:string){
       this.url=`http://localhost:42585/chamboCRUD/api${url}`;
-      console.log(this.url);
     }
 }

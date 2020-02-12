@@ -11,13 +11,13 @@ export class PlaceService extends ServiceService{
  }
 
  getAllPlaces() {
-  const path = `${this.url}`;
-  console.log(path);
+  const path = this.url;  
   return this.http.get(path);
 }
 
 getById(id: number) {
-  const path = `${this.url}/${id}`;
+  const path = this.url+'/'+id;
+  console.log(path);  
   return this.http.get(path);
 }
 

@@ -9,11 +9,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'places-details',
+    path: 'placesDetails/:id',
     loadChildren: () => import('./pages/places-details/places-details.module').then( m => m.PlacesDetailsPageModule)
   },
   {
-    path: 'places',
+    path: 'places/:id',
     loadChildren: () => import('./pages/places/places.module').then( m => m.PlacesPageModule)
   },
   {

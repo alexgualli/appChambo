@@ -1,9 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>home</ion-title>
+    <ion-title>GAD CHAMBO</ion-title>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
+
+  <ion-item-sliding *ngFor="let category of categories">
+    <ion-card color="light">        
+        <ion-toolbar color="light">
+            <ion-buttons slot="primary">
+                <ion-button color="secondary" routerLink="/places/{{category.id}}">
+                    <ion-icon slot="icon-only" name="eye"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+            <ion-title>{{ category.nombre }}</ion-title>
+        </ion-toolbar>
+        <ion-card-content>
+            
+        </ion-card-content>
+    </ion-card>
+</ion-item-sliding>
 
 </ion-content>
