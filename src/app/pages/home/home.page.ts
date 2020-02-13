@@ -11,6 +11,7 @@ export class HomePage implements OnInit {
   categories:any[];
   categoriesFilter:any[];
 
+  admin:boolean=false;
   constructor(private categoryService:CategoryService) { }
 
   ngOnInit() {
@@ -18,6 +19,7 @@ export class HomePage implements OnInit {
     this.getAllCategories();
   }
 
+ 
   getAllCategories(refresher?) {
     this.categoryService.getAllCategories()
       .subscribe((res: any) => {

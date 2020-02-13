@@ -22,4 +22,8 @@ export class CategoryService extends ServiceService {
     console.log(path);  
     return this.http.get(path);
   }
+
+  createCategory(category){
+    return this.http.post(this.url,category);
+  }
 }

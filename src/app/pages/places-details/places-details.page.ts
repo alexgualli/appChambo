@@ -33,13 +33,13 @@ export class PlacesDetailsPage implements OnInit {
         this.place = res;
       })
     }
+    this.maps();
   }
 
 url:string;
 
   async maps(event?) {
     let loading = await this.loadingController.create({ duration: 15000 });
-    loading.present();
     navigator.geolocation.getCurrentPosition(pos => {
       this.url = "https://maps.google.com/maps?&z=15&t=k&q=" + this.place.latitud + " " + this.place.longitud;
       

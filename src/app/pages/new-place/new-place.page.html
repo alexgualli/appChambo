@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar Lugar Turistico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row color="primary" justify-content-center>
+      <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+        <div text-center>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <ion-item  class="item-interactive item-select item ios in-list ion-activatable ion-focusable item-label hydrated item-has-value">
+    <ion-label id="ion-sel-3-lbl" class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Seleccione una Categoria</font></font></ion-label>
+    <ion-select ok-text="Okay" cancel-text="Nah" role="combobox" aria-haspopup="dialog" aria-expanded="false" aria-labelledby="ion-sel-3-lbl" class="ios in-item hydrated">
+      <ion-select-option *ngFor="let category of categories" value="{{ category.nombre }}" role="option" id="ion-selopt-15" class="ios hydrated"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{ category.nombre }}</font></font></ion-select-option>      
+    <input type="hidden" class="aux-input" name="ion-sel-3" value="win98"></ion-select>
+  </ion-item>  
+
+  
+
+</ion-content>

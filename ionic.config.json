@@ -1,5 +1,7 @@
 {
   "name": "appChambo",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

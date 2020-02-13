@@ -12,6 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 
 import {HttpClientModule} from '@angular/common/http';
+import User from '../app/pages/entity/user';
+import Category from '../app/pages/entity/category';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +22,8 @@ import {HttpClientModule} from '@angular/common/http';
   providers: [
     StatusBar,
     SplashScreen,
+    Category,
+    User,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

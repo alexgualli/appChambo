@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PlaceService } from 'src/app/service/place/place.service';
 import { ActivationEnd, ActivatedRoute } from '@angular/router';
+import { CategoryService } from 'src/app/service/category/category.service';
 
 @Component({
   selector: 'app-places',
@@ -11,14 +12,24 @@ export class PlacesPage implements OnInit {
 
   places:any[];
   placesFilter:any[];
+  category:any[];
   id:number;
-  constructor(private placeService:PlaceService, private activatedRoute:ActivatedRoute) { }
+  constructor(private categoryService:CategoryService,private placeService:PlaceService, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit() {
     this.places = [];
+    this.category=[];
     this.id=parseInt(this.activatedRoute.snapshot.paramMap.get('id'));
     this.getAllPlaces();
+    this.getCategory(this.id);
 
+  }
+
+  getCategory(id){
+    this.categoryService.getById(this.id).subscribe((res:any)=>{
+      this.category=res;
+      console.log(this.category);
+    })
   }
 
   getAllPlaces(refresher?) {

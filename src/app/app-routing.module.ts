@@ -20,6 +20,18 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
+  {
+    path: 'registro',
+    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: 'new-place',
+    loadChildren: () => import('./pages/new-place/new-place.module').then( m => m.NewPlacePageModule)
+  },
+  {
+    path: 'new-category',
+    loadChildren: () => import('./pages/new-category/new-category.module').then( m => m.NewCategoryPageModule)
+  }
 ];
 
 @NgModule({
