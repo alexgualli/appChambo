@@ -14,7 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import User from '../app/pages/entity/user';
 import Category from '../app/pages/entity/category';
-
+import { PlacesPage } from '../app/pages/places/places.page';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -22,6 +22,7 @@ import Category from '../app/pages/entity/category';
   providers: [
     StatusBar,
     SplashScreen,
+    PlacesPage,
     Category,
     User,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
