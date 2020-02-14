@@ -8,6 +8,7 @@ import { PlacesDetailsPageRoutingModule } from './places-details-routing.module'
 
 import { PlacesDetailsPage } from './places-details.page';
 
+
 @NgModule({
   imports: [
     CommonModule,

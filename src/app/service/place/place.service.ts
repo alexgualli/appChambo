@@ -21,4 +21,8 @@ getById(id: number) {
   return this.http.get(path);
 }
 
+createPlace(place){
+  return this.http.post(this.url,place);
+}
+
 }

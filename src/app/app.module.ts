@@ -10,11 +10,16 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 
+import { NavController, NavParams } from '@ionic/angular';
 
 import {HttpClientModule} from '@angular/common/http';
 import User from '../app/pages/entity/user';
 import Category from '../app/pages/entity/category';
 import { PlacesPage } from '../app/pages/places/places.page';
+import { Camera } from '@ionic-native/camera/ngx';
+
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -24,6 +29,8 @@ import { PlacesPage } from '../app/pages/places/places.page';
     SplashScreen,
     PlacesPage,
     Category,
+    Camera,
+    NavParams,
     User,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
