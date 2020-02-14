@@ -22,6 +22,14 @@ export class PlacesPage implements OnInit {
     console.log("CAT: ", this.cat);
   }
 
+  doRefresh(refresher) {
+    this.getAllPlaces(refresher);
+    setTimeout(() => {
+      refresher.target.complete();
+    }, 1000);
+
+  }
+
   ngOnInit() {
     this.places = [];
     this.category = [];
